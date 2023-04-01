@@ -2,8 +2,9 @@ import WebSearchResults from '@/components/WebSearchResults'
 import Link from 'next/link'
 import React from 'react'
 
-export default async function WebSearchPage({searchParams}) {
+export default async function WebSearchPage({ searchParams }) {
   const startIndex = searchParams.start || "1"
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   const res = await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_API_KEY}&cx=${process.env.NEXT_PUBLIC_CONTEXT_KEY}&q=${searchParams.searchTerm}&start=${startIndex}`)
 
   if (!res.ok) {
