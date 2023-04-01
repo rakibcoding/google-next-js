@@ -12,12 +12,12 @@ export default function SearchBox() {
     const router = useRouter();
     const searchTerm = searchParams.get('searchTerm')
     const [term, setTerm] = useState(searchTerm || '')
-    const handleSubmit=()=>{
+    const handleSubmit=(e)=>{
         e.preventDefault();
         if (!term.trim()) return;
         router.push(`/search/web?searchTerm=${term}`);
     }
-    
+
     return (
         <form
       className="flex border border-gray-200 rounded-full shadow-lg px-6 py-3 ml-10 mr-5 flex-grow max-w-3xl items-center"
