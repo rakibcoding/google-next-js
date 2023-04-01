@@ -14,6 +14,7 @@ export default function SearchHeader() {
               width="120"
               height="40"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png"
+              alt="img"
             />
           </Link>
           <div className="flex-1">
