@@ -1,9 +1,10 @@
+import HomeHeader from "@/components/HomeHeader";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      {/* <HomeHeader /> */}
+      <HomeHeader />
       <div className="flex flex-col items-center mt-24">
         <Image
           width="300"
